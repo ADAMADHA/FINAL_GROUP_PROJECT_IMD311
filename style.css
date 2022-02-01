@@ -1,0 +1,1071 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),black),url(picture/banner.JPG);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 140px;
+}
+
+nav .fa {
+    display: none;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: sandybrown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 80px;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 100px;
+}
+.text-box p{
+    margin: 20px 0 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 30px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.hero-btn:hover{
+    border: 1px solid sandybrown;
+    background: sandybrown;
+    transition: 1s;
+}
+
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 24px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: sandybrown;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;  
+    }
+}
+
+/*---------feature------------*/
+
+#feature {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 33px;
+    color: sandybrown;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p:after {
+    content: '';
+    width: 50px;
+    height: 35;
+    background: linear-gradient(sandybrown,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1 {
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: sandybrown;
+}
+
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.features-icon .fas {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: sandybrown;
+    border: 1px solid sandybrown;
+}
+
+.features-text {
+    padding: 0 20px;
+    text-align: initial;
+}
+
+@media screen and (max-width: 770px) {
+    .title-text h1 {
+    font-size: 24px;
+    }
+
+    .features {
+    flex-basis: 100%;
+    }
+
+    .features h1 {
+        font-size: 1px;
+    }
+
+    .features-img {
+    flex-basis: 100%;
+    }
+
+    .features-img img {
+    width: 80%;
+    border-radius: 10px;
+    }
+
+}
+
+/*----------------product-------------------*/
+
+#product {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.product-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-product {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-product img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), sandybrown);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-product:hover .overlay {
+    opacity: 1;
+}
+
+.product-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+.hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.product-desc p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.single-product:hover .product-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+
+.test {
+    margin: auto;
+}
+
+.test a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    border: 1.5px solid black;
+    position: relative;
+    z-index: 1; 
+    transition: color 0.5s;
+}
+
+.test img {
+    position: absolute;
+    width: 80px;
+    top: 7;
+}
+
+.test a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: sandybrown;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.test a:hover span {
+    width: 100%;
+} 
+
+.test a:hover {
+    color: sandybrown;
+} 
+
+/*-----------------------team-----------------------*/
+
+#team {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.team-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.team-col {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px grey;
+    cursor: pointer;
+    transition: transform .5s;
+    background: sandybrown;
+}
+
+.team-col p {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;;
+}
+
+.user {
+    display: flex;
+    align-items:center;
+    margin: 20px 0;
+}
+
+.user img {
+    width: 100px;
+    margin: 20px;
+    bottom border-radius: 3px;
+}
+
+.user-info .fab {
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+} 
+
+.user-info small {
+    color: #fff;
+}
+
+.user-info h4 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.team-col:hover {
+    transform: translateY(-7px);
+}
+
+
+.test2 {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.test2 a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    border: 1.5px solid black;
+    position: relative;
+    z-index: 1; 
+    transition: color 0.5s;
+}
+
+.test2 img {
+    position: absolute;
+    width: 80px;
+    top: 7;
+}
+
+.test2 a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: sandybrown;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.test2 a:hover span {
+    width: 100%;
+} 
+
+.test2 a:hover {
+    color: sandybrown;
+} 
+
+@media screen and (max-width: 770px) {
+    .team-col {
+        flex-basis: 100%;
+    }
+
+}
+
+
+
+/*-------------------footer------------------*/
+
+#footer {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+    position: relative;
+}
+
+.footer-row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left,.footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-row h1 {
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+}
+
+.footer-left .fas ,.footer-right .fas {
+    font-size: 20px;
+    color: sandybrown;
+    margin: 10px;
+} 
+
+.footer-img {
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+
+.social-links{
+    text-align: center;
+}
+
+.social-links .fab {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid sandybrown;
+    margin: 40px 5px 0;
+    color: sandybrown;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.social-links .fab:hover {
+    background: sandybrown;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.social-links p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 770px) {
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+
+    .footer-img {
+        top: 25%;
+    }
+}
+
+/*---------- about us page ---------------*/
+
+.about-us-header{
+    height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),black),url(picture/2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.about-us-header h1{
+    margin-top: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+}
+
+.about-us{
+    width: 85%;
+    margin:auto;
+    padding-top: px;
+    padding-bottom: 50px;
+}
+
+.my-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.my-col h1{
+    padding-top: 0;
+    margin-bottom: 50px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: sandybrown;
+
+}
+.my-col p{
+    padding: 15px 0 25px;
+    font-weight: bold;
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider figure {
+    position: relative;
+    width: 400%;
+    margin right: 700%;
+    animation: 15s slider infinite;
+}
+
+#slider figure img {
+    width: 9%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -200%;
+    }
+    100% {
+        left: -200%;
+    }
+}
+
+
+.team-row1 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.team-col1 {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px grey;
+    cursor: pointer;
+    transition: transform .5s;
+    background: sandybrown;
+}
+
+.team-col1 p {
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.user1 {
+    display: flex;
+    align-items:center;
+    margin: 20px 0;
+}
+
+.user1 img {
+    width: 100px;
+    margin: 20px;
+    bottom border-radius: 3px;
+}
+
+
+.user-info1 p {
+   align-content: center;
+}
+
+.user-info1 .fas {
+    margin-left: 10px;
+    color: black;
+    font-size: 30px;
+} 
+
+.user-info1 small {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.team-col1:hover {
+    transform: translateY(-7px);
+}
+
+@media screen and (max-width: 770px) {
+    .team-col1 {
+        flex-basis: 100%;
+    }
+}
+
+
+/*------------- our product content --------------*/
+
+.product-sub-header {
+    height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),black),url(picture/product.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.product-sub-header h1{
+    margin-top: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+}
+
+.product-content {
+    width: 85%;
+    margin:auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background: #fff;
+}
+
+.product-title-text {
+    text-align: center;
+    padding-bottom: 70px;
+    margin-top: 60px;
+}
+
+.product-title-text p {
+    margin: auto;
+    font-size: 60px;
+    color: sandybrown;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.my-col2{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.my-col2 h1{
+    padding-top: 0;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    color: sandybrown;
+}
+.my-col2 p{
+    padding: 30px 0 25px;
+    font-weight: bold;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.team-row2 {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.team-col2 {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px grey;
+    cursor: pointer;
+    transition: transform .5s;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),sandybrown);
+}
+
+.team-col2 p {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.user2 {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+
+}
+
+.user2 img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.user-info2 .fas {
+    margin-left: 10px;
+    color: black;
+    font-size: 30px;
+} 
+
+.user-info2 small {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.user-info2 h4 {
+    margin-top: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: black;
+}
+
+.team-col2:hover {
+    transform: translateY(-7px);
+}
+
+@media screen and (max-width: 770px) {
+    .team-col {
+        flex-basis: 100%;
+    }
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: rgb(243, 180, 125);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 70px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonials-col .fa{
+    color: brown;
+}
+
+
+/*------------- Marketing content ---------------*/
+
+.marketing-header{
+    height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),black),url(picture/biz5.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.marketing-header h1{
+    margin-top: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+}
+
+.marketing-title-text  {
+    text-align: center;
+    padding-bottom: 70px;
+    margin-top: 60px;
+}
+
+.marketing-title-text p {
+    margin-top: 10px;
+    font-size: 60px;
+    color: sandybrown;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#marketing {
+    width: 100%;
+    padding: 10px 0;
+    background: #efefef;
+}
+
+.marketing-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-marketing {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-marketing img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.marketing-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), sandybrown);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-marketing:hover .marketing-overlay {
+    opacity: 1;
+}
+
+.marketing-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+.hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.marketing-desc p {
+    font-size: 14px;
+}
+
+.single-marketing:hover .marketing-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+
+/*----- contact me page -----*/
+
+.contact-header{
+    height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),black),url(picture/contact1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.contact-header h1{
+    margin-top: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+}
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+
+.contact-me{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 200%;
+    color: sienna;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+body{
+    background: rgb(255, 254, 254);
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+.container h1{
+    padding: 60pz 0;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
